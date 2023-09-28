@@ -1,9 +1,6 @@
-import axios from 'axios';
 import { API_KEY, catInfoDiv, loader, selection } from './refs';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import { progressBar } from './progressBar';
-
-axios.defaults.headers.common['x-api-key'] = API_KEY;
 
 createOptions();
 selection.addEventListener('change', onSelect);
@@ -32,21 +29,34 @@ async function onSelect(event) {
   const selectedBreedId = event.target.value;
   const objData = await fetchCatByBreed(selectedBreedId);
   const catData = objData[0];
-
   displayData(catData);
   loader.classList.add('loader-hidden');
 }
 
 function displayData(data) {
-  console.log(data);
   const {
     url,
-    breeds: [{ name, description, temperament, affection_level, energy_level }],
+    breeds: [
+      {
+        name,
+        description,
+        temperament,
+        adaptability,
+        affection_level,
+        child_friendly,
+        energy_level,
+        grooming,
+        intelligence,
+        social_needs,
+        stranger_friendly,
+      },
+    ],
   } = data;
+
   const breedCards = [
     {
-      name: 'Playfulness',
-      level: affection_level,
+      name: 'Adaptability',
+      level: adaptability,
     },
     {
       name: 'Activity Level',
@@ -54,7 +64,15 @@ function displayData(data) {
     },
     {
       name: 'Friendliness To Other Pets',
-      level: affection_level,
+      level: stranger_friendly,
+    },
+    {
+      name: 'Friendliness To Children',
+      level: child_friendly,
+    },
+    {
+      name: 'Grooming Requirements',
+      level: grooming,
     },
     {
       name: 'Affection Towards Owners',
@@ -62,11 +80,11 @@ function displayData(data) {
     },
     {
       name: 'Intelligence',
-      level: affection_level,
+      level: intelligence,
     },
     {
       name: 'Need For Attention',
-      level: affection_level,
+      level: social_needs,
     },
   ];
 
@@ -83,8 +101,6 @@ function displayData(data) {
     })
     .join('');
 
-  // console.log(breedCardModule);
-
   const markup = `
     <img src="${url}" alt="${name}" />
     <div class="content">
@@ -93,7 +109,7 @@ function displayData(data) {
       <p class="temperament">
         Temperament: <span>${temperament}</span>
       </p>
-      <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 10px;">${breedCardModule}</ul>
+      <ul class="progress-list">${breedCardModule}</ul>
     `;
 
   catInfoDiv.innerHTML = markup;
