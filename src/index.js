@@ -1,5 +1,5 @@
 import { catInfoDiv, loader, selection } from './refs';
-import { fetchBreeds, fetchCatByBreed } from './cat-api';
+import { getBreeds, getCatByBreed } from './cat-api';
 import { progressBar } from './progressBar';
 
 createOptions();
@@ -7,7 +7,7 @@ selection.addEventListener('change', onSelect);
 
 async function createOptions() {
   loader.classList.remove('loader-hidden');
-  const breedData = await fetchBreeds();
+  const breedData = await getBreeds();
   if (breedData === undefined) {
     loader.classList.add('loader-hidden');
     return;
@@ -27,10 +27,17 @@ async function createOptions() {
 async function onSelect(event) {
   loader.classList.remove('loader-hidden');
   const selectedBreedId = event.target.value;
-  const objData = await fetchCatByBreed(selectedBreedId);
+  const objData = await getCatByBreed(selectedBreedId);
+
+  if (objData.length === 0) {
+    loader.classList.add('loader-hidden');
+    catInfoDiv.innerHTML = `<h3>We could not find anything. Maybe you should change your search query?</h3>`;
+    return;
+  }
+
   const catData = objData[0];
-  displayData(catData);
   loader.classList.add('loader-hidden');
+  displayData(catData);
 }
 
 function displayData(data) {
