@@ -1,4 +1,4 @@
-import { API_KEY, catInfoDiv, loader, selection } from './refs';
+import { catInfoDiv, loader, selection } from './refs';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import { progressBar } from './progressBar';
 
