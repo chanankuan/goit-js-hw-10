@@ -8,16 +8,16 @@ const levelOne = `
   >
     <title id="FriendlinesstoOtherPets">level 1 in 5</title>
     <g clip-path="url(#roundingFriendlinesstoOtherPets)">
-      <rect x="0%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="20.2%" width="20%" height="10" fill="#D2D1D3"></rect>
-      <rect x="40.4%" width="20%" height="10" fill="#D2D1D3"></rect>
+      <rect x="0%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="20.2%" width="19.2%" height="10" fill="#D2D1D3"></rect>
+      <rect x="40.4%" width="19.2%" height="10" fill="#D2D1D3"></rect>
       <rect
         x="60.599999999999994%"
-        width="20%"
+        width="19.2%"
         height="10"
         fill="#D2D1D3"
       ></rect>
-      <rect x="80.8%" width="20%" height="10" fill="#D2D1D3"></rect>
+      <rect x="80.8%" width="19.2%" height="10" fill="#D2D1D3"></rect>
     </g>
     <defs>
       <clipPath id="roundingFriendlinesstoOtherPets">
@@ -37,16 +37,16 @@ const levelTwo = `
   >
     <title id="FriendlinesstoOtherPets">level 2 in 5</title>
     <g clip-path="url(#roundingFriendlinesstoOtherPets)">
-      <rect x="0%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="20.2%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="40.4%" width="20%" height="10" fill="#D2D1D3"></rect>
+      <rect x="0%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="20.2%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="40.4%" width="19.2%" height="10" fill="#D2D1D3"></rect>
       <rect
         x="60.599999999999994%"
-        width="20%"
+        width="19.2%"
         height="10"
         fill="#D2D1D3"
       ></rect>
-      <rect x="80.8%" width="20%" height="10" fill="#D2D1D3"></rect>
+      <rect x="80.8%" width="19.2%" height="10" fill="#D2D1D3"></rect>
     </g>
     <defs>
       <clipPath id="roundingFriendlinesstoOtherPets">
@@ -66,16 +66,16 @@ const levelThree = `
   >
     <title id="FriendlinesstoOtherPets">level 3 in 5</title>
     <g clip-path="url(#roundingFriendlinesstoOtherPets)">
-      <rect x="0%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="20.2%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="40.4%" width="20%" height="10" fill="#410078"></rect>
+      <rect x="0%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="20.2%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="40.4%" width="19.2%" height="10" fill="#410078"></rect>
       <rect
         x="60.599999999999994%"
-        width="20%"
+        width="19.2%"
         height="10"
         fill="#D2D1D3"
       ></rect>
-      <rect x="80.8%" width="20%" height="10" fill="#D2D1D3"></rect>
+      <rect x="80.8%" width="19.2%" height="10" fill="#D2D1D3"></rect>
     </g>
     <defs>
       <clipPath id="roundingFriendlinesstoOtherPets">
@@ -95,16 +95,16 @@ const levelFour = `
   >
     <title id="FriendlinesstoOtherPets">level 4 in 5</title>
     <g clip-path="url(#roundingFriendlinesstoOtherPets)">
-      <rect x="0%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="20.2%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="40.4%" width="20%" height="10" fill="#410078"></rect>
+      <rect x="0%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="20.2%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="40.4%" width="19.2%" height="10" fill="#410078"></rect>
       <rect
         x="60.599999999999994%"
-        width="20%"
+        width="19.2%"
         height="10"
         fill="#410078"
       ></rect>
-      <rect x="80.8%" width="20%" height="10" fill="#D2D1D3"></rect>
+      <rect x="80.8%" width="19.2%" height="10" fill="#D2D1D3"></rect>
     </g>
     <defs>
       <clipPath id="roundingFriendlinesstoOtherPets">
@@ -124,16 +124,16 @@ const levelFive = `
   >
     <title id="FriendlinesstoOtherPets">level 5 in 5</title>
     <g clip-path="url(#roundingFriendlinesstoOtherPets)">
-      <rect x="0%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="20.2%" width="20%" height="10" fill="#410078"></rect>
-      <rect x="40.4%" width="20%" height="10" fill="#410078"></rect>
+      <rect x="0%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="20.2%" width="19.2%" height="10" fill="#410078"></rect>
+      <rect x="40.4%" width="19.2%" height="10" fill="#410078"></rect>
       <rect
         x="60.599999999999994%"
-        width="20%"
+        width="19.2%"
         height="10"
         fill="#410078"
       ></rect>
-      <rect x="80.8%" width="20%" height="10" fill="#410078"></rect>
+      <rect x="80.8%" width="19.2%" height="10" fill="#410078"></rect>
     </g>
     <defs>
       <clipPath id="roundingFriendlinesstoOtherPets">
