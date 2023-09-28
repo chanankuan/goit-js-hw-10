@@ -30,6 +30,7 @@ li {
 
 .cat-info {
   display: flex;
+  align-items: center;
   gap: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -37,7 +38,8 @@ li {
   padding: 40px 30px;
   text-align: left;
   min-height: 300px;
-  max-width: 70%;
+  width: 1000px;
+  max-width: 90%;
 }
 
 .cat-info > img {
@@ -50,6 +52,8 @@ li {
 
 .temperament {
   font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .temperament > span {
@@ -94,8 +98,19 @@ li {
   }
 }
 
-/* ul {
+.progress-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 10px;
-} */
+  gap: 20px 20px;
+}
+
+.progress-list p {
+  display: inline-grid;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.ProgressBar-module--bar--2c5bb {
+  border-radius: 20px;
+  margin-top: 10px;
+}
