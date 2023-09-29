@@ -20,7 +20,7 @@ async function createOptions() {
     })
     .join('');
 
-  selection.innerHTML = markup;
+  selection.insertAdjacentHTML('beforeend', markup);
   loader.classList.add('loader-hidden');
 }
 
