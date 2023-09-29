@@ -1,3 +1,4 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { catInfoDiv, loader, selection } from './refs';
 import { getBreeds, getCatByBreed } from './cat-api';
 import { progressBar } from './progressBar';
@@ -6,38 +7,46 @@ createOptions();
 selection.addEventListener('change', onSelect);
 
 async function createOptions() {
-  loader.classList.remove('loader-hidden');
-  const breedData = await getBreeds();
-  if (breedData === undefined) {
-    loader.classList.add('loader-hidden');
-    return;
-  }
-  const markup = breedData
-    .map(breed => {
-      return `
-      <option value=${breed.id}>${breed.name}</option>
-    `;
-    })
-    .join('');
+  loader.classList.remove('hidden');
+  try {
+    const breedData = await getBreeds();
+    const markup = breedData
+      .map(breed => {
+        return `
+        <option value=${breed.id}>${breed.name}</option>
+      `;
+      })
+      .join('');
 
-  selection.insertAdjacentHTML('beforeend', markup);
-  loader.classList.add('loader-hidden');
+    selection.insertAdjacentHTML('beforeend', markup);
+  } catch (error) {
+    console.error(error);
+    Notify.failure('Oops! Something went wrong! Try reloading the page!');
+  } finally {
+    loader.classList.add('hidden');
+    selection.classList.remove('hidden');
+  }
 }
 
 async function onSelect(event) {
-  loader.classList.remove('loader-hidden');
+  loader.classList.remove('hidden');
   const selectedBreedId = event.target.value;
-  const objData = await getCatByBreed(selectedBreedId);
 
-  if (objData.length === 0) {
-    loader.classList.add('loader-hidden');
-    catInfoDiv.innerHTML = `<h3>We could not find anything. Maybe you should change your search query?</h3>`;
-    return;
+  try {
+    const objData = await getCatByBreed(selectedBreedId);
+    if (objData.length === 0) {
+      loader.classList.add('loader-hidden');
+      catInfoDiv.innerHTML = `<h3>We could not find anything. Maybe you should change your search query?</h3>`;
+      return;
+    }
+
+    const catData = objData[0];
+    loader.classList.add('hidden');
+    displayData(catData);
+  } catch (error) {
+    console.error(error);
+    Notify.failure('Oops! Something went wrong! Try reloading the page!');
   }
-
-  const catData = objData[0];
-  loader.classList.add('loader-hidden');
-  displayData(catData);
 }
 
 function displayData(data) {

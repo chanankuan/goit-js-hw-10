@@ -82,7 +82,7 @@ li {
   /* transition: opacity 0.75s, visibility 0.75s; */
 }
 
-.loader-hidden {
+.hidden {
   opacity: 0;
   visibility: hidden;
 }
