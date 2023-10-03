@@ -9,6 +9,6 @@ export async function getBreeds() {
 }
 
 export async function getCatByBreed(breedId) {
-  const response = await axios.get(`${BASE_URL}?bsreed_id=${breedId}`);
+  const response = await axios.get(`${BASE_URL}?breed_id=${breedId}`);
   return response.data;
 }
